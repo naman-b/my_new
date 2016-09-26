@@ -1,0 +1,678 @@
+extends layout
+
+
+block content
+	.row
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+		.col-xs-10.col-sm-10.col-md-10.col-lg-10
+			nav.navbar
+				.container-fluid
+					.navbar-header
+						a.navbar-brand(href='/')
+							span
+								img.img-responsive.logoimg(src='/images/logo.png')
+					ul.nav.navbar-nav.cen
+						li.active
+							a(href='#') Contests
+						li
+							a(href='#') Food Stories
+						li
+							a(href='#') +&nbspAdd Your Recipe
+						li
+							a(href='#') Cookbooks
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='#', style='color:#d30000;font-weight:600;') Login
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+	.row.search
+		input(type='search', name='search')
+		button(name='search_btn')
+			i.fa.fa-search
+	.row.search_cat
+		span#add_f Add a filter
+		span
+			a(href='#', style='border-color:#f7969d;') Veg
+		span
+			a(href='#', style='border-color:#f5969a;') Non-veg
+		span
+			a(href='#', style='border-color:#ff9b9b;') Egg free
+		span
+			a(href='#', style='border-color:#f6959c;') Healthy
+		span
+			a(href='#', style='border-color:#f6b648;')
+				| Deits &nbsp
+				i.fa.fa-caret-down
+		span
+			a(href='#', style='border-color:#eb9059;')
+				| Cuisines &nbsp
+				i.fa.fa-caret-down
+		span
+			a(href='#', style='border-color:#669253;')
+				| Courses &nbsp
+				i.fa.fa-caret-down
+	.row.main_row
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+		.col-xs-10.col-sm-10.col-md-10.col-lg-10
+			.row.collection
+				.collection_head Collections
+				.collection_contnt Explore India's best repices, picked by our editorial Team
+				.out-slide
+					i.fa.fa-caret-left.left-caret
+					.main_slide
+						.slider
+							span
+								a#cuisine.slide
+									| Cuisines 
+									span.plus +
+									span.minus -
+							span
+								a.slide(href='#') Basic Recipes-From Scratch!
+							span
+								a.slide(href='#') Easy Paneer Recipes
+							span
+								a.slide(href='#') Corn Delights
+							span
+								a.slide(href='#') Homemade Pickles
+							span
+								a.slide(href='#') Recipes using bread
+							span
+								a.slide(href='#') so cheez..
+							span
+								a.slide(href='#') Corn Delights
+							span
+								a.slide(href='#') so cheez
+					i.fa.fa-caret-right.right-caret
+					.clearfix
+					.cuisines_block
+						span
+							a.sub_cuisines(href='#') Thai
+						span
+							a.sub_cuisines(href='#') Sri Lankan
+						span
+							a.sub_cuisines(href='#') Spanish
+						span
+							a.sub_cuisines(href='#') South Indian
+						span
+							a.sub_cuisines(href='#') Parsee
+						span
+							a.sub_cuisines(href='#') Pan Asian
+						span
+							a.sub_cuisines(href='#') Orissa
+						span
+							a.sub_cuisines(href='#') Mughlai
+						span
+							a.sub_cuisines(href='#') Mexican
+						span
+							a.sub_cuisines(href='#') Madhya Pradesh
+						span
+							a.sub_cuisines(href='#') Japanese
+						span
+							a.sub_cuisines(href='#') Jammu and Kashmir
+						span
+							a.sub_cuisines(href='#') Himachal
+						span
+							a.sub_cuisines(href='#') Greek
+						span
+							a.sub_cuisines(href='#') Goa
+						span
+							a.sub_cuisines(href='#') French
+						span
+							a.sub_cuisines(href='#') European
+						span
+							a.sub_cuisines(href='#') British
+						span
+							a.sub_cuisines(href='#') Bihar
+						span
+							a.sub_cuisines(href='#') Awadhi
+						span
+							a.sub_cuisines(href='#') Australian
+						span
+							a.sub_cuisines(href='#') Assam and North East
+						span
+							a.sub_cuisines(href='#') Andhra Pradesh
+						span
+							a.sub_cuisines(href='#') American
+						span
+							a.sub_cuisines(href='#') Chinese
+						span
+							a.sub_cuisines(href='#') Italian
+						span
+							a.sub_cuisines(href='#') Middle Eastern
+						span
+							a.sub_cuisines(href='#') Fusion
+						span
+							a.sub_cuisines(href='#') Tamil Nadu
+						span
+							a.sub_cuisines(href='#') Kerala
+						span
+							a.sub_cuisines(href='#') Sindhi
+						span
+							a.sub_cuisines(href='#') West Bengal
+						span
+							a.sub_cuisines(href='#') Rajasthan
+						span
+							a.sub_cuisines(href='#') Gujarat
+						span
+							a.sub_cuisines(href='#') Punjabi
+						span
+							a.sub_cuisines(href='#') Maharashtra
+						span
+							a.sub_cuisines(href='#') Karnataka
+						span
+							a.sub_cuisines(href='#') Hyderabadi
+						span
+							a.sub_cuisines(href='#') UP
+			.clearfix
+			.row.pop_res
+				.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+					.blck
+						.img_res
+							img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/im1.jpg')
+						.title Baked Dry Bhakadwadi
+						.cook Jagruti
+				.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+					.blck
+						.img_res
+							img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/im1.jpg')
+						.title Baked Dry Bhakadwadi
+						.cook Jagruti
+				.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+					.blck
+						.img_res
+							img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/im1.jpg')
+						.title Baked Dry Bhakadwadi
+						.cook Jagruti
+				.col-xs-2.col-sm-2.col-md-2.col-lg-.padding0
+					.blck
+						.img_res
+							img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/im1.jpg')
+						.title Baked Dry Bhakadwadi
+						.cook Jagruti
+				.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+					.blck
+						.img_res
+							img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/im1.jpg')
+						.title Baked Dry Bhakadwadi
+						.cook Jagruti
+			.row.rep_ved_whatcook
+				.col-xs-6.xol-sm-6.col-md-6.col-lg-6(style='padding:0;')
+					.rec_ved_head Recipe videos and stories
+					.rec_ved_sub_head Easy to learn cooking videos along with food stories
+					.ved_block
+						.row.ved_row
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+								.ved
+									.ved_img
+										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/how-to-make-garam-masala20160112110153101070.jpg')
+									.ved_content
+										.ved_head Videos
+										.ved_what How to Make Condensed Milk
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+								.food_story
+									.story_img
+										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/how-to-make-garam-masala20160112110153101070.jpg')
+									.story_content
+										.story_head Food Story
+										.story_what 9 Breads you should Make At Home.
+						.row.ved_row
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+								.ved
+									.ved_img
+										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/homemade-short-crust-pastry201602170554497980.jpg')
+									.ved_content
+										.ved_head Videos
+										.ved_what Sabhar Powder
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+								.ved
+									.ved_img
+										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/homemade-vegetable-stock20160219071027864875.jpg')
+									.ved_content
+										.ved_head Videos
+										.ved_what Schezwan Sauce
+				.col-xs-4.col-sm-4.col-md-4.col-lg-4
+					.rec_whatcook_head What's Cooking ?
+					.rec_whatcook_sub_head Share what ypou ate today or simply ask a question
+					.scroller_div
+						.inner_post1
+							.row
+								img.img-responsive.person_img.lazy(src="/images/lazy.gif" data-src='/images/p1.jpg')
+								.name
+									| Lata Lala 
+									span.posted_on 2 mins ago
+							.row.description I made thsi for my 12 years old Rahul's birthday today :) He and his friends
+							.img_whatcook
+								img.img-responsive.whatcook_banner.lazy(src="/images/lazy.gif" data-src='/images/i1.jpg')
+								.heart
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+							.row.comments
+								img.img-responsive.comment_img.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.name Suchitra Kamnath
+								p.comment_para
+									| very nice lata. I will try this out for my kids too.
+									| where did you get the recipe ? please share
+							.row.more view all 15 comments
+							.row.type_comment
+								img.img-responsive.comment_img.lazy(src="/images/lazy.gif" data-src='/images/i1.jpg')
+								input(type='text', name='comment')
+						.inner_post1
+							.row
+								img.img-responsive.person_img.lazy(src="/images/lazy.gif" data-src='/images/p1.jpg')
+								.name
+									| Lata Lala 
+									span.posted_on 2 mins ago
+							.row.description I made thsi for my 12 years old Rahul's birthday today :) He and his friends
+							.img_whatcook
+								img.img-responsive.whatcook_banner.lazy(src="/images/lazy.gif" data-src='/images/i1.jpg')
+								.heart
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+							.row.comments
+								img.img-responsive.comment_img.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.name Suchitra Kamnath
+								p.comment_para
+									| very nice lata. I will try this out for my kids too.
+									| where did you get the recipe ? please share
+							.row.more view all 15 comments
+							.row.type_comment
+								img.img-responsive.comment_img.lazy(src="/images/lazy.gif" data-src='/images/i1.jpg')
+								input(type='text', name='comment')
+						.inner_post1
+							.row
+								img.img-responsive.person_img.lazy(src="/images/lazy.gif" data-src='/images/p1.jpg')
+								.name
+									| Lata Lala 
+									span.posted_on 2 mins ago
+							.row.description I made thsi for my 12 years old Rahul's birthday today :) He and his friends
+							.img_whatcook
+								img.img-responsive.whatcook_banner.lazy(src="/images/lazy.gif" data-src='/images/i1.jpg')
+								.heart
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+							.row.comments
+								img.img-responsive.comment_img.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.name Suchitra Kamnath
+								p.comment_para
+									| very nice lata. I will try this out for my kids too.
+									| where did you get the recipe ? please share
+							.row.more view all 15 comments
+							.row.type_comment
+								img.img-responsive.comment_img.lazy(src="/images/lazy.gif" data-src='/images/i1.jpg')
+								input(type='text', name='comment')
+				.col-xs-2.col-sm-2.col-md-2.col-lg-2
+					.social
+						button.follow Follow us on
+						.logo_container
+							a(href='')
+								.follow_logo
+									i.fa.fa-facebook
+							a(href='')
+								.follow_logo
+									i.fa.fa-instagram
+							a(href='')
+								.follow_logo
+									i.fa.fa-twitter
+							a(href='')
+								.follow_logo
+									i.fa.fa-pinterest-p
+						.social_top Sign up for our news letters
+						form.email
+							input(type='email', name='signup', placeholder='Your email')
+							button.email_button Submit
+			.clearfix
+			.row.feed_row
+				.feed_head Recipe feed
+				.feed_sub_head
+					| Browse through trending recipes sahred by the community. 
+					a(href='') + Share your recipe
+				.row.feed
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+				.row.feed
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+					.col-xs-3.col-sm-3.col-md-3.col-lg-3
+						.fed_block
+							.feed_header
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+								.feed_name Sujata Limbu
+								.feed_last_actice Updated 30 minutes ago
+							.genere Simply Italian
+							.feed_banner_img
+								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+							.dish
+								.dish_name Italian Pizza
+								.like
+									i.fa.fa-heart
+									br
+									span.count 124 Likes
+				.load_more
+					button Load More
+			// feed row end
+		// end of midd container
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+	// main_row end
+	.row.lower-header
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+		.col-xs-10.col-sm-10.col-md-10.col-lg-10
+			span.social_icons
+				i.fa.fa-facebook
+				i.fa.fa-instagram
+				i.fa.fa-pinterest-p
+				i.fa.fa-twitter
+			span.copyright Copyright 2015 BetterButter
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+	.row.lower-navbar
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+		.col-xs-10.col-sm-10.col-md-10.col-lg-10
+			span.low_nav_logo
+				a(href='/')
+					img.img-responsive(src='/images/logo.png')
+			span.low_nav_list
+				ul
+					li
+						a(href='#') Home
+					li
+						a(href='#') About us
+					li
+						a(href='#') Contact us
+					li
+						a(href='#') Terms and Conditions
+					li
+						a(href='#') Privacy policy
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+	.row.footer
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+		.col-xs-10.col-sm-10.col-md-10.col-lg-10
+			.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+				ul.main_tabs
+					a(href='#')
+						li Recipe Videos
+					a(href='#')
+						li Contests
+					a(href='#')
+						li Food stories
+					a(href='#')
+						li Add your recipes
+					a(href='#')
+						li Cookbooks
+				ul.popular_tags
+					a.list_head(href='#')
+						li Popular tags
+					a(href='#')
+						li Veg recipes
+					a(href='#')
+						li Non-veg recipes
+					a(href='#')
+						li Egg free recipes
+					a(href='#')
+						li Healthy recipes
+			.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+				ul.indian_rec
+					a.list_head(href='#')
+						li Indian Recipes
+					a(href='#')
+						li West Bengal recipes
+					a(href='#')
+						li Bihar recipes
+					a(href='#')
+						li Orissa recipes
+					a(href='#')
+						li Andhra Pradesh recipes
+					a(href='#')
+						li Kerala recipes
+					a(href='#')
+						li Tamil Nadu recipes
+					a(href='#')
+						li Karnataka recipes
+					a(href='#')
+						li Goa recipes 
+					a(href='#')
+						li Maharashtra recipes
+					a(href='#')
+						li Gujarat recipes
+					a(href='#')
+						li Rajasthan recipes
+					a(href='#')
+						li Madhya Pradesh recipes
+					a(href='#')
+						li Himachal recipes
+					a(href='#')
+						li Assam recipes
+					a(href='#')
+						li North East recipes
+					a(href='#')
+						li Uttar Pradesh recipes
+					a(href='#')
+						li Parsi recipes
+					a(href='#')
+						li Mughali recipes
+					a(href='#')
+						li Awadhi recipes
+					a(href='#')
+						li Hyderbadi recipes
+					a(href='#')
+						li Jammu and Kashmir recipes
+			.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+				ul.indian_rec
+					a.list_head(href='#')
+						li Global recipes
+					a(href='#')
+						li Mexican recipes
+					a(href='#')
+						li Italian recipes
+					a(href='#')
+						li French recipes
+					a(href='#')
+						li Spanish recipes
+					a(href='#')
+						li Chinese recipes
+					a(href='#')
+						li Japanese recipes
+					a(href='#')
+						li Thai recipes
+					a(href='#')
+						li Pan-Asian recipes 
+					a(href='#')
+						li Greek recipes
+					a(href='#')
+						li Midle Eastern recipes
+					a(href='#')
+						li Australian recipes
+					a(href='#')
+						li European recipes
+					a(href='#')
+						li British recipes
+					a(href='#')
+						li American recipes
+					a(href='#')
+						li Fusion recipes
+					a(href='#')
+						li German recipes
+					a(href='#')
+						li Afghani recipes
+					a(href='#')
+						li Brazilian recipes
+			.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+				ul.indian_rec
+					a.list_head(href='#')
+						li Recipes for diets
+					a(href='#')
+						li Healthy recipes
+					a(href='#')
+						li Low fat recipes
+					a(href='#')
+						li High fibre recipes
+					a(href='#')
+						li Low calorie recipe
+					a(href='#')
+						li Gluten Free recipes
+					a(href='#')
+						li Diabetes recipes
+					a(href='#')
+						li Low carb recipes
+					a(href='#')
+						li Low cholesterol recipes
+					a(href='#')
+						li Egg free recipes
+					a(href='#')
+						li Lactose free recipes
+					a(href='#')
+						li Vegan recipes
+			.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
+				ul.indian_rec
+					a.list_head(href='#')
+						li Recipe collections
+					a(href='#')
+						li Recipes for weight loss
+					a(href='#')
+						li Easy recipes
+					a(href='#')
+						li Vegetarian recipes
+					a(href='#')
+						li Basic recipes
+					a(href='#')
+						li Editor's picks
+					a(href='#')
+						li Starters
+					a(href='#')
+						li Biryanis and Pulaos
+					a(href='#')
+						li Banking bread
+					a(href='#')
+						li Pickles
+					a(href='#')
+						li Vegetaroam mains
+					a(href='#')
+						li Rolls and Wraps
+					a(href='#')
+						li Sandwiches
+					a(href='#')
+						li Everyday salads
+					a(href='#')
+						li Paneer recipes
+					a(href='#')
+						li Curd recipes
+					a(href='#')
+						li Mango recipes
+					a(href='#')
+						li Smoothies
+					a(href='#')
+						li Tiffin recipes
+					a(href='#')
+						li Healthy recipes
+					a(href='#')
+						li Breakfast
+					a(href='#')
+						li Healthy snacks
+			.clearfix
+			.row.footer_text_declaraction
+				span.declaration BETTERBUTTER
+				|  is a social discovery platform for recipes. Discover a range of recipes with the BetterButter community, made by your friends and celebrity chefs alike. Share your favourite recipes and get appreciated.
+		.col-xs-1.col-sm-1.col-md-1.col-lg-1
+
+
