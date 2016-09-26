@@ -7,22 +7,25 @@ block content
 		.col-xs-10.col-sm-10.col-md-10.col-lg-10
 			nav.navbar
 				.container-fluid
-					.navbar-header
-						a.navbar-brand(href='/')
-							span
-								img.img-responsive.logoimg(src='/images/logo.png')
-					ul.nav.navbar-nav.cen
-						li.active
-							a(href='#') Contests
-						li
-							a(href='#') Food Stories
-						li
-							a(href='#') +&nbspAdd Your Recipe
-						li
-							a(href='#') Cookbooks
-					ul.nav.navbar-nav.navbar-right
-						li
-							a(href='#', style='color:#d30000;font-weight:600;') Login
+					.col-xs-2.col-sm-2.col-md-2.col-lg-2
+						.navbar-header
+							a.navbar-brand(href='/')
+								span
+									img.img-responsive.logoimg(src='/images/logo.png')
+					.col-xs-8.col-sm-8.col-md-8.col-lg-8.navbar_center(style="text-align:center;")					
+						ul.nav.navbar-nav.cen
+							li.active
+								a(href='#') Contests
+							li
+								a(href='#') Food Stories
+							li
+								a(href='#') +&nbspAdd Your Recipe
+							li
+								a(href='#') Cookbooks
+					.col-xs-2.col-sm-2.col-md-2.col-lg-2.no_left_right_padding			
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href='#', style='color:#d30000;font-weight:600;') Login
 		.col-xs-1.col-sm-1.col-md-1.col-lg-1
 	.row.search
 		input(type='search', name='search')

@@ -1,6 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 font-family: 'Roboto', sans-serif;
 
+.no_left_right_padding{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
 .content{
     font-family: roboto!important;
 }
@@ -9,10 +14,14 @@ font-family: 'Roboto', sans-serif;
 	margin-left: 0!important;
 }
 .cen{
-	padding-left: 18% !important;
+	float: none!important;
+    display: inline-block!important;
 }
 .logoimg{
 	float: left;
+}
+.container-fluid{
+    padding: 0!important;
 }
 .navbar-brand{
     padding: 15px 0!important;
