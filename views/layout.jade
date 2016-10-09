@@ -7,6 +7,9 @@ html
 		link(rel='stylesheet', href='/stylesheets/main.css')		
 	body
 		block content
+			script(type="text/javascript")
+				var feedData = !{JSON.stringify(feedData)};
+				console.log(feedData);
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 		script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 		script(type='text/javascript', src='/javascripts/main.js')

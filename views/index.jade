@@ -2,7 +2,10 @@ extends layout
 
 
 block content
-	.row
+	script(type="text/javascript")
+		var feedData = !{JSON.stringify(feedData)};
+		console.log(feedData);
+	.row(style="height:43px;")
 		.col-xs-1.col-sm-1.col-md-1.col-lg-1
 		.col-xs-10.col-sm-10.col-md-10.col-lg-10
 			nav.navbar
@@ -12,7 +15,7 @@ block content
 							a.navbar-brand(href='/')
 								span
 									img.img-responsive.logoimg(src='/images/logo.png')
-					.col-xs-8.col-sm-8.col-md-8.col-lg-8.navbar_center(style="text-align:center;")					
+					.col-xs-8.col-sm-8.col-md-8.col-lg-8.navbar_center(style="text-align:center;height:50px;")					
 						ul.nav.navbar-nav.cen
 							li.active
 								a(href='#') Contests
@@ -183,6 +186,9 @@ block content
 						span
 							a.sub_cuisines(href='#') UP
 			.clearfix
+			.row.collection.popular_recipe_row
+				.collection_head Popular Recipes
+				.collection_contnt The Top 5 saved recipes by the BetterButter community this week.
 			.row.pop_res
 				.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
 					.blck
@@ -194,7 +200,7 @@ block content
 					.blck
 						.img_res
 							img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/im1.jpg')
-						.title Baked Dry Bhakadwadi
+						.title Baked Dry Bhakadwadi 
 						.cook Jagruti
 				.col-xs-2.col-sm-2.col-md-2.col-lg-2.padding0
 					.blck
@@ -215,19 +221,19 @@ block content
 						.title Baked Dry Bhakadwadi
 						.cook Jagruti
 			.row.rep_ved_whatcook
-				.col-xs-6.xol-sm-6.col-md-6.col-lg-6(style='padding:0;')
+				.col-xs-6.xol-sm-6.col-md-6.col-lg-6(style='padding:0;padding-right: 15px;')
 					.rec_ved_head Recipe videos and stories
 					.rec_ved_sub_head Easy to learn cooking videos along with food stories
 					.ved_block
 						.row.ved_row
-							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6(style="padding-right:7.5px;")
 								.ved
 									.ved_img
 										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/how-to-make-garam-masala20160112110153101070.jpg')
 									.ved_content
 										.ved_head Videos
 										.ved_what How to Make Condensed Milk
-							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6(style="padding-left:7.5px;")
 								.food_story
 									.story_img
 										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/how-to-make-garam-masala20160112110153101070.jpg')
@@ -235,14 +241,14 @@ block content
 										.story_head Food Story
 										.story_what 9 Breads you should Make At Home.
 						.row.ved_row
-							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6(style="padding-right:7.5px;")
 								.ved
 									.ved_img
 										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/homemade-short-crust-pastry201602170554497980.jpg')
 									.ved_content
 										.ved_head Videos
 										.ved_what Sabhar Powder
-							.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.col-xs-6.col-sm-6.col-md-6.col-lg-6(style="padding-left:7.5px;")
 								.ved
 									.ved_img
 										img.img-responsive.lazy(src="/images/lazy.gif" data-src='https://betterbutterbucket.s3.amazonaws.com/videos/homemade-vegetable-stock20160219071027864875.jpg')
@@ -338,7 +344,7 @@ block content
 							a(href='')
 								.follow_logo
 									i.fa.fa-pinterest-p
-						.social_top Sign up for our news letters
+						.social_top Sign up for our newsletters
 						form.email
 							input(type='email', name='signup', placeholder='Your email')
 							button.email_button Submit
@@ -349,127 +355,131 @@ block content
 					| Browse through trending recipes sahred by the community. 
 					a(href='') + Share your recipe
 				.row.feed
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-				.row.feed
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
-					.col-xs-3.col-sm-3.col-md-3.col-lg-3
-						.fed_block
-							.feed_header
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
-								.feed_name Sujata Limbu
-								.feed_last_actice Updated 30 minutes ago
-							.genre Simply Italian
-							.feed_banner_img
-								img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
-							.dish
-								.dish_name Italian Pizza
-								.like
-									i.fa.fa-heart
-									br
-									span.count 124 Likes
+						each feed in feedData.results
+							.col-xs-3.col-sm-3.col-md-3.col-lg-3
+								.fed_block(id=feed.id)
+									.feed_header
+										img.img-responsive.lazy(src="/images/lazy.gif" data-src=feed.user.profile_img)
+										.feed_name= feed.user.firstname + feed.user.lastname 
+										.feed_last_actice Updated 30 minutes ago
+									.genre= feed.name 	
+									.feed_banner_img
+										img.img-responsive.lazy(src="/images/lazy.gif" data-src=feed.recipes[0].recipe_images)
+									.dish
+										.dish_name= feed.recipes[0].name
+										.like
+											if feed.recipes[0].has_liked == true
+												i.fa.fa-heart(style="color=red")
+											else
+												i.fa.fa-heart		
+											br
+											span.count=feed.recipes[0].like_count +" Likes"
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
+				//- .row.feed
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
+				//- 	.col-xs-3.col-sm-3.col-md-3.col-lg-3
+				//- 		.fed_block
+				//- 			.feed_header
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/d1.png')
+				//- 				.feed_name Sujata Limbu
+				//- 				.feed_last_actice Updated 30 minutes ago
+				//- 			.genre Simply Italian
+				//- 			.feed_banner_img
+				//- 				img.img-responsive.lazy(src="/images/lazy.gif" data-src='/images/i2.jpg')
+				//- 			.dish
+				//- 				.dish_name Italian Pizza
+				//- 				.like
+				//- 					i.fa.fa-heart
+				//- 					br
+				//- 					span.count 124 Likes
 				.load_more
 					button Load More
 			// feed row end
