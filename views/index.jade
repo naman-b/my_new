@@ -2,7 +2,6 @@ extends layout
 
 
 block content
-
 	.row(style="height:43px;")
 		.col-xs-1.col-sm-1.col-md-1.col-lg-1
 		.col-xs-10.col-sm-10.col-md-10.col-lg-10
@@ -353,6 +352,7 @@ block content
 					| Browse through trending recipes sahred by the community. 
 					a(href='') + Share your recipe
 				.row.feed
+					if feedData.count > 0
 						each feed in feedData.results
 							.col-xs-3.col-sm-3.col-md-3.col-lg-3
 								.fed_block(id=feed.id)
